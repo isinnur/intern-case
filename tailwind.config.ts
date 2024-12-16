@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        lightText: "var(--light-text-color)",
+        lightButton: "var(--light-button-background)",
       },
     },
   },
