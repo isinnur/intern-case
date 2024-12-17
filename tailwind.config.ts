@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         lightText: "var(--light-text-color)",
         lightButton: "var(--light-button-background)",
+        spanText: " var(--span-text-color)",
       },
     },
   },

@@ -4,7 +4,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className=" w-320 h-24 flex items-center justify-evenly ">
+    <div className="w-[1216px] h-24 flex items-center justify-between ">
       {/* logo kısmı */}
       <Image
         src="/assets/Logo.png"
