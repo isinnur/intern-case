@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return <div></div>;
+const SingleBlog = () => {
+  return <div>hellç</div>;
 };
 
-export default page;
+export default SingleBlog;

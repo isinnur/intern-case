@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const page = () => {
+const BlogList = () => {
   return (
     <div className="w-340 mt-12 flex items-center justify-center flex-col">
       <h2 className="font-semibold text-2xl ">Page Title</h2>
@@ -31,4 +31,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogList;
