@@ -57,7 +57,7 @@ const Footer = () => {
               placeholder="Your Email"
               className="outline-none"
             />
-            <CiMail className="" />
+            <CiMail className="text-xl" />
           </div>
           <button className="w-[320px] h-12 bg-[#4B6BFB] text-white rounded-md">
             Subscribe

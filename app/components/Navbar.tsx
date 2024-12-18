@@ -25,13 +25,13 @@ const Navbar = () => {
 
       {/* arama / theme */}
       <div className=" flex gap-10 w-300">
-        <div className="relative flex">
+        <div className="flex">
           <input
             type="text"
             className="bg-lightButton p-3 pr-6 rounded-md w-full outline-none"
             placeholder="Search"
           />
-          <IoIosSearch className="absolute right-1 top-1/3 text-lightText" />
+          <IoIosSearch className="text-lightText" />
         </div>
         <div className="w-20 h-10 bg-lightButton rounded-full"></div>
       </div>
