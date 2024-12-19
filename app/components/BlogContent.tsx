@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BlogContent = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 ">
       <Image
         src="/assets/singleBlog2.png"
         width={800}

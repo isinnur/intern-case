@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Card from "../components/Card";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const BlogList = () => {
+  const blogPosts = [
+    { id: "1", title: "Blog Post 1" },
+    { id: "2", title: "Blog Post 2" },
+    { id: "3", title: "Blog Post 3" },
+  ];
   return (
     <div className="w-340 mt-12 flex items-center justify-center flex-col">
       <h2 className="font-semibold text-3xl ">Page Title</h2>
@@ -42,15 +49,11 @@ const BlogList = () => {
         </div>
       </div>
       <div className="my-12 grid grid-cols-3 gap-5 ">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {blogPosts.map((post) => (
+          <Link key={post.id} href={`/BlogList/${post.id}`}>
+            <Card />
+          </Link>
+        ))}
       </div>
       <div className=" mb-52">
         <button className="border border-spacing-1 border-[#E8E8EA] py-3 px-5 rounded-md text-spanText">
