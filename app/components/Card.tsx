@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Card = () => {
   return (
-    <div className="w-[392px] h-[488px] rounded-xl border border-spacing-1 border-[#E8E8EA] flex flex-col items-center ">
+    <div className="w-[392px] h-[488px] rounded-xl border border-spacing-1 border-[#E8E8EA] flex flex-col items-center cursor-pointer">
       <Image
         src="/assets/blog1.png"
         width={360}
