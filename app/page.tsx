@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>selamlar</div>;
+  return <div>HOME PAGE</div>;
 }

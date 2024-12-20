@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Card from "../components/Card";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const BlogList = () => {
+  const pathname = usePathname();
   const blogPosts = [
     { id: "1", title: "Blog Post 1" },
     { id: "2", title: "Blog Post 2" },
@@ -13,7 +16,13 @@ const BlogList = () => {
     <div className="w-340 mt-12 flex items-center justify-center flex-col">
       <h2 className="font-semibold text-3xl ">Page Title</h2>
       <div className="flex text-spanText gap-4 text-sm mb-12 mt-2 justify-between">
-        <span>Home</span>
+        <span
+          className={`${
+            pathname === "/BlogList" ? "font-semibold" : "font-normal"
+          }`}
+        >
+          Home
+        </span>
         <span>|</span>
         <span>Link One</span>
       </div>
