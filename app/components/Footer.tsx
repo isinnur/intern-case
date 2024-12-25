@@ -1,7 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { CiMail } from "react-icons/ci";
 
 const Footer = () => {

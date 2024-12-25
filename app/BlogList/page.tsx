@@ -36,6 +36,10 @@ const BlogList = () => {
       .catch((error) => console.error("Error fetching post:", error));
   }, [limit]);
 
+  console.log("====================================");
+  console.log(blogs);
+  console.log("====================================");
+
   const handleLoadMore = () => {
     setLimit((prevLimit) => prevLimit + 9); // Limiti 9 artır
   };
