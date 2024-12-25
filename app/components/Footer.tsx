@@ -1,9 +1,14 @@
+"use client";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className="bg-[#f6f6f7] w-full h-[500px] flex flex-col  items-center justify-between">
+    <div className="bg-[#f6f6f7] w-full h-[500px] flex flex-col  items-center justify-between dark:bg-[#181A2A]">
       <div className=" w-[1216px] h-[254px] flex  justify-between items-center gap-5 mt-16">
         <div className="text-lg">
           <span className="font-semibold ">About</span>
@@ -46,16 +51,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[392px] h-[254px] bg-white flex flex-col items-center rounded-xl">
+        <div className="w-[392px] h-[254px] bg-white flex flex-col items-center rounded-xl dark:bg-[#242535]">
           <span className="text-xl mb-2 mt-8">Weekly Newsletter</span>
           <p className="text-spanText mb-8">
             Get blog articles and offers via email
           </p>
-          <div className="flex border items-center justify-between px-4 w-[320px] h-12 rounded-md mb-2">
+          <div className="flex border items-center justify-between px-4 w-[320px] h-12 rounded-md mb-2 dark:bg-[#181A2A] border-none">
             <input
               type="email"
               placeholder="Your Email"
-              className="outline-none"
+              className="outline-none bg-transparent "
             />
             <CiMail className="text-xl" />
           </div>
@@ -69,7 +74,11 @@ const Footer = () => {
         <div className="flex gap-2">
           <div>
             <Image
-              src="/assets/Logo2.png"
+              src={
+                theme == "light"
+                  ? "/assets/Logo2.png"
+                  : "/assets/dark-bottom-logo.png"
+              }
               width={48}
               height={48}
               alt="Logo image"

@@ -31,7 +31,7 @@ const BlogList = () => {
   }, []);
 
   return (
-    <div className="w-340 mt-12 flex items-center justify-center flex-col">
+    <div className="w-340 mt-12 flex items-center justify-center flex-col ">
       <h2 className="font-semibold text-3xl ">Page Title</h2>
       <div className="flex text-spanText gap-4 text-sm mb-12 mt-2 justify-between">
         <span
@@ -83,7 +83,7 @@ const BlogList = () => {
         ))}
       </div>
       <div className=" mb-52">
-        <button className="border border-spacing-1 border-[#E8E8EA] py-3 px-5 rounded-md text-spanText">
+        <button className="border border-spacing-1 border-[#E8E8EA] dark:border-[#242535] py-3 px-5 rounded-md text-spanText">
           Load More
         </button>
       </div>
