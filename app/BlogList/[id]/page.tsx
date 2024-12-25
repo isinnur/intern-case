@@ -52,7 +52,7 @@ const SingleBlog = () => {
           <span>August 20, 2022</span>
         </div>
         <div className="font-normal">
-          <BlogContent content={post?.content} />
+          <BlogContent content={post?.content || "Content is loading"} />
         </div>
       </div>
     </div>
