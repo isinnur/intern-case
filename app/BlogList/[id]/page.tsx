@@ -1,8 +1,34 @@
+"use client";
 import BlogContent from "@/app/components/BlogContent";
+// import BlogContent from "@/app/components/BlogContent";
 import Image from "next/image";
-import React from "react";
+import { useParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
+
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+}
 
 const SingleBlog = () => {
+  const [post, setPost] = useState<Post | null>(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+    fetch(`${baseUrl}/api/posts/${id}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch post");
+        }
+        return res.json();
+      })
+      .then((data) => setPost(data))
+      .catch((error) => console.error("Error fetching post:", error));
+  }, [id]);
+
   return (
     <div className="flex w-[800px] mb-[135px] font-semibold">
       <div>
@@ -10,10 +36,7 @@ const SingleBlog = () => {
           <span className="bg-blue-600 text-white p-3 rounded-md w-24 h-7 flex items-center justify-center font-medium">
             Technology
           </span>
-          <h1 className="text-4xl mt-4">
-            The Impact of Technology on the Workplace: How Technology is
-            Changing
-          </h1>
+          <h1 className="text-4xl mt-4">{post?.title}</h1>
         </div>
 
         <div className="mt-5 flex items-center gap-5 font-normal text-spanText">
@@ -29,7 +52,7 @@ const SingleBlog = () => {
           <span>August 20, 2022</span>
         </div>
         <div className="font-normal">
-          <BlogContent />
+          <BlogContent content={post?.content} />
         </div>
       </div>
     </div>

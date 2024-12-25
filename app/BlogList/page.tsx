@@ -4,14 +4,32 @@ import Image from "next/image";
 import Card from "../components/Card";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+}
 
 const BlogList = () => {
   const pathname = usePathname();
-  const blogPosts = [
-    { id: "1", title: "Blog Post 1" },
-    { id: "2", title: "Blog Post 2" },
-    { id: "3", title: "Blog Post 3" },
-  ];
+  const [blogs, setBlogs] = useState<Post[]>([]);
+
+  useEffect(() => {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+    fetch(`${baseUrl}/api/posts/`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch post");
+        }
+        return res.json();
+      })
+      .then((data) => setBlogs(data))
+      .catch((error) => console.error("Error fetching post:", error));
+  }, []);
+
   return (
     <div className="w-340 mt-12 flex items-center justify-center flex-col">
       <h2 className="font-semibold text-3xl ">Page Title</h2>
@@ -58,9 +76,9 @@ const BlogList = () => {
         </div>
       </div>
       <div className="my-12 grid grid-cols-3 gap-5 ">
-        {blogPosts.map((post) => (
-          <Link key={post.id} href={`/BlogList/${post.id}`}>
-            <Card />
+        {blogs.map((card) => (
+          <Link key={card.id} href={`/BlogList/${card.id}`}>
+            <Card title={card.title} content={card.content} />
           </Link>
         ))}
       </div>

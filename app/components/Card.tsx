@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-const Card = () => {
+interface CardProps {
+  title: string;
+  content: string;
+  createdAt: string;
+}
+
+const Card: React.FC<CardProps> = ({ title }) => {
   return (
     <div className="w-[392px] h-[488px] rounded-xl border border-spacing-1 border-[#E8E8EA] flex flex-col items-center cursor-pointer">
       <Image
@@ -16,10 +22,7 @@ const Card = () => {
           <span className="bg-blue-50 text-blue-700 p-1 mb-2 w-fit rounded-md">
             Technology
           </span>
-          <h2 className="text-xl font-semibold mt-4">
-            The Impact of Technology on the Workplace: How Technology is
-            Changing
-          </h2>
+          <h2 className="text-xl font-semibold mt-4">{title}</h2>
         </div>
 
         <div className="mt-5 flex items-center gap-5 ">
