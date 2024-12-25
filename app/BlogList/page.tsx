@@ -15,6 +15,8 @@ interface Post {
 const BlogList = () => {
   const pathname = usePathname();
   const [blogs, setBlogs] = useState<Post[]>([]);
+  const [visibleBlogs, setVisibleBlogs] = useState<Post[]>([]); // Gösterilen bloglar
+  const [limit, setLimit] = useState(9); // Gösterilecek maksimum blog sayısı
 
   useEffect(() => {
     const baseUrl =
@@ -26,9 +28,17 @@ const BlogList = () => {
         }
         return res.json();
       })
-      .then((data) => setBlogs(data))
+      .then((data) => {
+        setBlogs(data);
+        setVisibleBlogs(data.slice(0, limit));
+      })
+
       .catch((error) => console.error("Error fetching post:", error));
-  }, []);
+  }, [limit]);
+
+  const handleLoadMore = () => {
+    setLimit((prevLimit) => prevLimit + 9); // Limiti 9 artır
+  };
 
   return (
     <div className="w-340 mt-12 flex items-center justify-center flex-col ">
@@ -75,15 +85,19 @@ const BlogList = () => {
           </div>
         </div>
       </div>
+
       <div className="my-12 grid grid-cols-3 gap-5 ">
-        {blogs.map((card) => (
+        {visibleBlogs.map((card) => (
           <Link key={card.id} href={`/BlogList/${card.id}`}>
             <Card title={card.title} content={card.content} />
           </Link>
         ))}
       </div>
       <div className=" mb-52">
-        <button className="border border-spacing-1 border-[#E8E8EA] dark:border-[#242535] py-3 px-5 rounded-md text-spanText">
+        <button
+          onClick={handleLoadMore}
+          className="border border-spacing-1 border-[#E8E8EA] dark:border-[#242535] py-3 px-5 rounded-md text-spanText"
+        >
           Load More
         </button>
       </div>

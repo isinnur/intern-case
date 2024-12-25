@@ -13,4 +13,5 @@ model BlogPost {
   title     String
   content   String
   createdAt DateTime @default(now())
+  
 }

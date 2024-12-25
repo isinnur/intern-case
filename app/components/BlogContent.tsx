@@ -27,7 +27,7 @@ const BlogContent: React.FC<ContentProps> = ({ content }) => {
           <p className="text-[#3B3C4A] dark:text-[#BABABF]">{content}</p>
         </div>
 
-        <div className="bg-[#E8E8EA] p-8 rounded-xl my-8 italic">
+        <div className="bg-[#E8E8EA] p-8 rounded-xl my-8 italic dark:bg-[#242535]">
           “ Traveling can expose you to new environments and potential health
           risks, so it's crucial to take precautions to stay safe and healthy. ”
         </div>

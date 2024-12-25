@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-[1216px] h-[118px] flex justify-between items-center border-t">
+      <div className="w-[1216px] h-[118px] flex justify-between items-center border-t dark:border-t-[#242535]">
         <div className="flex gap-2">
           <div>
             <Image
