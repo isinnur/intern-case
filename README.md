@@ -140,23 +140,23 @@ This project is built with Next.js, TypeScript, Tailwind CSS, and Prisma. It inc
 ## Screenshots
 
 <p align="center">
-  <img src="![alt text](image.png)" alt="Homepage" width="45%" />
-  <img src="![alt text](image-1.png)" alt="Blog List" width="45%" />
+  <img src="./public/screenshots/image.png" alt="Homepage" width="45%" />
+  <img src="./public/screenshots/image-1.png" alt="Blog List" width="45%" />
 </p>
 
 <p align="center">
-  <img src="![alt text](image-3.png)" alt="Single Blog" width="45%" />
-  <img src="![alt text](image-2.png)" alt="Dark Mode" width="45%" />
+  <img src="./public/screenshots/image-3.png" alt="Single Blog" width="45%" />
+  <img src="./public/screenshots/image-2.png" alt="Dark Mode" width="45%" />
 </p>
 <p align="center">
-  <img src="![alt text](image-4.png)" alt="Single Blog" width="45%" />
-  <img src="![alt text](image-5.png)" alt="Dark Mode" width="45%" />
+  <img src="./public/screenshots/image-4.png" alt="Single Blog" width="45%" />
+  <img src="./public/screenshots/image-5.png" alt="Dark Mode" width="45%" />
 </p>
 <p align="center">
-  <img src="![alt text](image-7.png)" alt="Single Blog" width="45%" />
-  <img src="![alt text](image-6.png)" alt="Dark Mode" width="45%" />
+  <img src="./public/screenshots/image-7.png" alt="Single Blog" width="45%" />
+  <img src="./public/screenshots/image-6.png" alt="Dark Mode" width="45%" />
 </p>
 <p align="center">
-  <img src="![alt text](image-8.png)" alt="Single Blog" width="45%" />
-  <img src="![alt text](image-9.png)" alt="Dark Mode" width="45%" />
+  <img src="./public/screenshots/image-8.png" alt="Single Blog" width="45%" />
+  <img src="./public/screenshots/image-9.png" alt="Dark Mode" width="45%" />
 </p>
