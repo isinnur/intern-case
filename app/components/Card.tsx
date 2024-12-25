@@ -3,7 +3,6 @@ import Image from "next/image";
 interface CardProps {
   title: string;
   content: string;
-  createdAt: string;
 }
 
 const Card: React.FC<CardProps> = ({ title }) => {
