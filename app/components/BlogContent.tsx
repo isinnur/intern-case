@@ -29,7 +29,8 @@ const BlogContent: React.FC<ContentProps> = ({ content }) => {
 
         <div className="bg-[#E8E8EA] p-8 rounded-xl my-8 italic dark:bg-[#242535]">
           “ Traveling can expose you to new environments and potential health
-          risks, so it's crucial to take precautions to stay safe and healthy. ”
+          risks, so it&apos;s crucial to take precautions to stay safe and
+          healthy. ”
         </div>
 
         <Image
