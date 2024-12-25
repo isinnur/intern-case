@@ -32,15 +32,6 @@ This project is built with Next.js, TypeScript, Tailwind CSS, and Prisma. It inc
 
    - Blog content is dynamically fetched and rendered from the API.
 
-### Other Features
-
-1. **SEO Optimized**
-   - Meta tags and structured data for better search engine indexing.
-2. **Custom Fonts**
-   - Integrated with Google Fonts for aesthetic typography.
-3. **Modern Icons**
-   - Utilizes Heroicons and React Icons for UI enhancement.
-
 ## Tech Stack
 
 ### Frontend
